@@ -30,5 +30,7 @@ describe('The name reversal app', function() {
 
     it('should successfully test a non-palindrome with a comparable parameter', function() {
         expect(isPalindrome('not a palindrome at all', 'lla ta emordnilap a ton')).to.be.false;
-    })
+    });
+
+    after(() => process.exit(0));
 });

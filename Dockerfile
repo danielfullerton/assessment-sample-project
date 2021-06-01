@@ -3,7 +3,6 @@ WORKDIR /usr/app
 COPY ./ ./
 
 RUN ["npm", "install"]
-RUN ["npm", "test"]
 
 EXPOSE 8080
 
