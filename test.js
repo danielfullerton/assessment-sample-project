@@ -16,11 +16,19 @@ describe('The name reversal app', function() {
         expect(reverse(name)).to.equal(expected);
     })
 
-    it('should successfully test a true palindrome', function() {
+    it('should successfully test a true palindrome without a comparable parameter', function() {
         expect(isPalindrome('racecar')).to.be.true;
     });
 
-    it('should successfully test a non-palindrome', function() {
+    it('should successfully test a non-palindrome without a comparable parameter', function() {
         expect(isPalindrome('not a palindrome at all')).to.be.false;
+    })
+
+    it('should successfully test a true palindrome with a comparable parameter', function() {
+        expect(isPalindrome('racecar', 'racecar')).to.be.true;
+    });
+
+    it('should successfully test a non-palindrome with a comparable parameter', function() {
+        expect(isPalindrome('not a palindrome at all', 'lla ta emordnilap a ton')).to.be.false;
     })
 });

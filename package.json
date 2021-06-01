@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "mocha test.js",
-    "bundle": "zip bundle.zip -r *"
+    "bundle": "zip -r bundle.zip ./ -x \"node_modules/*\" \".git/*\" \".idea/*\" \"bundle.zip\""
   },
   "keywords": [],
   "author": "Daniel Fullerton",

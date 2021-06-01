@@ -11,7 +11,13 @@ const reverse = name => {
     }
     return name.split('').reverse().join('');
 }
-const isPalindrome = (name) => name === reverse(name);
+
+const isPalindrome = (name, reversed) => {
+    if (reversed) {
+        return name === reversed;
+    }
+    return name === reverse(name);
+}
 
 app.get('/reverse', (req, res) => {
     const { name } = req.query;
@@ -19,7 +25,7 @@ app.get('/reverse', (req, res) => {
         const reversed = reverse(name);
         return res.status(200).send({
             reversed,
-            isPalindrome: isPalindrome(name)
+            isPalindrome: isPalindrome(name, reversed)
         });
     } catch (e) {
         return res.status(400).send({
