@@ -1,0 +1,21 @@
+{
+  "name": "name-reversal",
+  "version": "1.0.0",
+  "description": "Simple express app that takes any string input via URL parameters and reverses it using JavaScript. As a bonus, it will tell you if that name is a palindrome.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha test.js",
+    "bundle": "zip bundle.zip -r *"
+  },
+  "keywords": [],
+  "author": "Daniel Fullerton",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0"
+  }
+}
