@@ -32,5 +32,9 @@ describe('The name reversal app', function() {
         expect(isPalindrome('not a palindrome at all', 'lla ta emordnilap a ton')).to.be.false;
     });
 
+    it('should successfully test a palindrome, ignoring all casing and whitespace', function() {
+        expect(isPalindrome(' Racecar', 'racEcAr ')).to.be.true;
+    });
+
     after(() => process.exit(0));
 });

@@ -13,6 +13,8 @@ const reverse = name => {
 }
 
 const isPalindrome = (name, reversed) => {
+    name = name.toLowerCase().trim();
+    reversed = reversed ? reversed.toLowerCase().trim() : reversed;
     if (reversed) {
         return name === reversed;
     }
